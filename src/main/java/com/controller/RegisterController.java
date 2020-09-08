@@ -23,7 +23,7 @@ public class RegisterController {
 
     @GetMapping("/")
     String index(){
-        return "register";
+        return "index";
     }
 
     @PostMapping("/register")
@@ -31,7 +31,7 @@ public class RegisterController {
 
         if(bindingResult.hasErrors()){
             List<FieldError> fieldErrorList=bindingResult.getFieldErrors();
-            fieldErrorList.forEach(err1 -> System.out.println(err1.getField()+" : "+ err1.getDefaultMessage()));
+            fieldErrorList.forEach(err -> System.out.println(err.getField()+" : "+ err.getDefaultMessage()));
 
             return "register";
         }

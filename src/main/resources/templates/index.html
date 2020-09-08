@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}">
-    <title>Welcome</title>
+    <title>index</title>
 </head>
 <body>
 <div class="container" style="max-width:600px;margin-top: 50px">
+<!--    <div class="well">-->
+<!--        <h1>Index</h1>-->
+<!--        <a href="http://localhost:8082/register">Register</a>-->
+<!--    </div>-->
     <div class="well">
-        <h1>Welcome</h1>
-        <div role="alert" class="alert alert-success">
-            <h1 th:text="${userForm.name}" ></h1>
-        </div>
-        <h2>Succeed in Registration</h2>
+        <form action="/register" >
+            <button type="submit"  method="get" class="btn btn-info">Register</button>
+        </form>
     </div>
 </div>
-
 </body>
 </html>
